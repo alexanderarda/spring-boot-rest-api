@@ -24,7 +24,7 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    // Create customer endpoint
+    // Create customer
     @PostMapping
     ResponseEntity<Response> create (@RequestBody @Validated Customer customer)
     {
@@ -42,6 +42,7 @@ public class CustomerController {
 
     }
 
+    // Update customer
     @PutMapping(path = "/{id}")
     ResponseEntity<Response> update (@PathVariable ("id") Long id, @RequestBody @Validated Customer customer) /*Mengambil Request data dari Body dan melakukan Proses Validasi, diseleksi berdasarkan id*/
     {
@@ -64,7 +65,7 @@ public class CustomerController {
 
     }
 
-
+    // Get customer by Id
     @GetMapping(path = "/{id}")
     ResponseEntity getById (@PathVariable("id") Long id)/*Mengambil Request data dari Berdasarkan id*/
     {
@@ -83,6 +84,7 @@ public class CustomerController {
                 .body(response);
     }
 
+    // Get all customers
     @GetMapping
     ResponseEntity<Response> findAll ()
     {
@@ -100,6 +102,8 @@ public class CustomerController {
 
     }
 
+
+    // Delete Customer
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     ResponseEntity<Response> deleteById (@PathVariable ("id")Long id)
     {

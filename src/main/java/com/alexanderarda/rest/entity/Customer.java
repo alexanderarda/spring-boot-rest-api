@@ -5,7 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Entity //Untuk Memberikan Identitas Data yang mengakses ke Database
+@Entity
 @Data
 public class Customer {
 
