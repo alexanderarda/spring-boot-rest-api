@@ -3,8 +3,6 @@ package com.alexanderarda.rest.controller;
 import com.alexanderarda.rest.Util.Response;
 import com.alexanderarda.rest.entity.Customer;
 import com.alexanderarda.rest.service.CustomerService;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 public class CustomerController {
 
-    public static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
     @Autowired
     CustomerService customerService;
