@@ -1,4 +1,4 @@
-# Spring Boot REST API
+# Spring Boot REST API H2 Database
 
 Spring Boot REST API use H2 In-memory database and Swagger UI for API Documentation
 
